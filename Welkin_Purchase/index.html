@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ItsMe Prince Shop</title>
+        <link rel="icon" href="icon.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="orders">
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Item</th>
+                <th>Extra Details</th>
+                <th>Paid</th>
+                <th>Purchase Date</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Sudhes</td>
+                <td>Welkin</td>
+                <td>851035299</td>
+                <td>&#8377;370</td>
+                <td>29 October 2023</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sudhes</td>
+                <td>Welkin</td>
+                <td>851035299</td>
+                <td>&#8377;380</td>
+                <td>29 November 2023</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Kaushal</td>
+                <td>Welkin</td>
+                <td>821612784</td>
+                <td>&#8377;380</td>
+                <td>2 December 2023</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Sudhes</td>
+                <td>Welkin</td>
+                <td>851035299</td>
+                <td>&#8377;370</td>
+                <td>29 November 2023</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Abhi</td>
+                <td>Welkin</td>
+                <td>819275445</td>
+                <td>&#8377;380</td>
+                <td>10 December 2023</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Xinatrez</td>
+                <td>Welkin</td>
+                <td>878943666</td>
+                <td>&#8377;385</td>
+                <td>14 December 2023</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Xinatrez</td>
+                <td>Welkin</td>
+                <td>862541594</td>
+                <td>&#8377;390</td>
+                <td>18 December 2023</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>CHAD VERIGL</td>
+                <td>Welkin</td>
+                <td>808030108</td>
+                <td>&#8377;400</td>
+                <td>19 December 2023</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Abhi</td>
+                <td>Welkin</td>
+                <td>819275445</td>
+                <td>&#8377;390</td>
+                <td>8 January 2024</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Simar</td>
+                <td>Welkin</td>
+                <td>808224783</td>
+                <td>&#8377;390</td>
+                <td>10 January 2024</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>CHAD VERIGL</td>
+                <td>Welkin</td>
+                <td>808030108</td>
+                <td>&#8377;400</td>
+                <td>14 January 2024</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>ArchiePlayz</td>
+                <td>Welkin</td>
+                <td>837044546</td>
+                <td>&#8377;400</td>
+                <td>22 January 2024</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Immortal4L</td>
+                <td>Welkin</td>
+                <td>832707332</td>
+                <td>&#8377;400</td>
+                <td>26 January 2024</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>ArchiePlayz</td>
+                <td>Welkin</td>
+                <td>801298445</td>
+                <td>&#8377;400</td>
+                <td>8 February 2024</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>ArchiePlayz</td>
+                <td>Welkin</td>
+                <td>801298445</td>
+                <td>&#8377;400</td>
+                <td>8 February 2024</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>CHAD VERIGL</td>
+                <td>Welkin</td>
+                <td>808030108</td>
+                <td>&#8377;400</td>
+                <td>11 February 2024</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Sudhes</td>
+                <td>Welkin</td>
+                <td>851035299</td>
+                <td>&#8377;390</td>
+                <td>15 February 2024</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Sudhes</td>
+                <td>Express Pass</td>
+                <td>811081572</td>
+                <td>&#8377;400</td>
+                <td>20 February 2024</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Pratyush</td>
+                <td>Express Pass</td>
+                <td>808089896</td>
+                <td>&#8377;400</td>
+                <td>20 February 2024</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Whis</td>
+                <td>Welkin</td>
+                <td>816555170</td>
+                <td>&#8377;400</td>
+                <td>21 February 2024</td>
+            </tr>
+        </table>
+    </div>
+    <button id="showButton">Show Content</button>
+    <script>
+            document.getElementById('showButton').addEventListener('click', function() {
+            var myDiv = document.getElementById('orders');
+            if (myDiv.style.display === 'none') {
+                myDiv.style.display = 'block';
+            } else {
+                myDiv.style.display = 'none';
+            }
+            });
+    </script>    
+</body>
+</html>

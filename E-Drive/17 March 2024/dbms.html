@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS | E Drive - Mohd Uvaish</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="pages.css" type="text/css">
+    <link rel="icon" href="LogoPNG.png" type="image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/studio-sans" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Jaldi" rel="stylesheet">
+    <style>
+        body{
+            background: #000428;  
+            background: -webkit-linear-gradient(to left, #004e92, #000428); 
+            background: linear-gradient(to left, #004e92, #000428); 
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html" class="active"><i class="fa fa-home"></i></a>
+        <div id="myLinks">
+            <hr>
+            <a href="index.html">Home</a>
+            <a href="se.html">Software Engineering</a>
+            <a href="cg.html">Computer Graphics</a>
+            <a href="ot.html">Optimization Techniques</a>
+            <a href="maths.html">Maths III</a>
+            <a href="contact.html">Contact/Feedback</a>
+        </div>
+        <a href="javascript:void(0);" class="icon"><i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div id="banner">
+        <h4>Index</h4>
+        <ul>
+            <li><a href="#unit1">UNIT - I</a></li>
+                <ul>
+                    <li><a href="#dbms">DBMS Architecture</a></li>
+                    <li><a href="#types_dbms">Types of Database Language</a></li>
+                    <li><a href="#dbms_model">Database Modeling Concept</a></li>
+                    <li><a href="#key">Key</a>
+                            <ul type="disc">
+                                <li><a href="#types_keys">Types of keys</a></li>
+                            </ul></li>
+                    <li><a href="#sql">Structured Query Language &#40 SQL &#41</a></li>
+                    <li><a href="#er-diagram">E-R Diagram [ Entity Relationship ]</a></li>
+                </ul>
+        </ul>
+    </div>
+    <div id="banner">
+        <h1 id="unit1">UNIT - I</h1>
+        <h2>Database Management System</h2>
+        <p><strong>Database: </strong>Database is a collection of related information in a systematic manner.</p>
+        <p><strong>Example: </strong>A row of a list of roll number and name of a particular class.</p>
+        <p>A database is a general term for any useful collection of logically data whereas DBMS is a computer for a software specially design to maintain database.</p>
+        <img src="dbms/first.jpg" loading="lazy" alt="Database">
+        <img src="dbms/database_types.jpg" loading="lazy" alt="Database_classification">
+        <img src="dbms/computer_class.jpg" loading="lazy" alt="Database_classification">
+        <h3 id="dbms">DBMS Architecture</h3>
+        <p>A DBMS is a way to centralized the storage and manage the data. The purpose of database is to provide the correct data to the correct user. The same set of data may be previewed  differently by different user.</p>
+        <img src="dbms/dbms_architecture.jpg" loading="lazy" alt="DBMS_archi">
+        
+        <h6>Internal/Physical Level:</h6>
+        <p>This is the lowest level of abstraction and describe how the data are actually stored. The physical level complex of low level structure in detail.</p>
+
+        <h6>Database schema and instance:</h6>
+        <p>The overall set of relationship for the entire database is known as database schema. it includes tables, their constraints and relationship.<br>The collection of information stored in the database at the particular movement is called instance of the database.</p>
+
+        <h3 id="types_dbms">Types of Database Language:</h3>
+        <p>There are many types of database languages: </p>
+        <ul>
+            <li>DDL &#40Data Definition Language &#41</li>
+            <li>DML &#40Data Manipulation Language &#41</li>
+            <li>DCL &#40Data Control Language &#41</li>
+        </ul>
+
+        <h6>DDL: </h6>
+        <p>DDL is used to define the conceptual schema of the database. It is a set of SQL command used to create modified and delete database structure.<br>They are generally used by the DBA &#40 Database administration &#41 . <br><strong>The full SQL command scheme available in DDL.</strong><ol>
+            <li>Create table</li>
+            <li>Alter table</li>
+            <li>Drop table</li>
+        </ol></p>
+
+        <h6>DML: </h6>
+        <p>DML is a language that enable user to access manipulate data stored in the database. The DML provides command to select, retrieve, delete, modify the data.<br><strong>The few SQL command available in DML: </strong><br>
+        <ol>
+            <li>Insert data</li>
+            <li>Modify data</li>
+            <li>Delete data</li>
+            <li>Retrieve data</li>
+        </ol>
+        </p>
+
+        <h6>DCL: </h6>
+        <p>Through DCL  we can control and access to data to the database. Sometimes DCL statement are grouped with DML statement.<br><strong> Through DCL we can:</strong> 
+        <ol>
+            <li>Commit</li>
+            <li>Roll back</li>
+            <li>Grant</li>
+        </ol></p>
+        <h3>Architecture of DBMS</h3>
+        <img src="dbms/dbms_architecture_full.jpg" loading="lazy" alt="DBMS_archi">
+        <h6>DDL Compiler: </h6>
+        <p>The DDL statements are said the DDL compiler. Which converts these statements to set of table these table contains the meta data concerning the database and arg in the form that can be used by other components of the DBMS</p>
+
+        <h6>DML Re Compiler and Query processor: </h6>
+        <p>The DML pre-compiler converts the DML statement embedded in an application program to normal procedure cost in the whole language.</p><p style="text-indent: 20px;">If the DML statement include the query than it goes to query processor which in traps the query and converts it into an efficient series of operation.</p>
+
+        <h6>Data Manager: </h6>
+        <p>Data Manager control the database it provides the interface between the database and the application program data manager convert the user request coming directly via the query processor or via application program to three physical file system.</p>
+        <p style="text-indent: 20px;">The data manager is responsible for the instruction with the file manager or interpret and security enforcement and concurrency control.</p>
+
+        <h6>File Manager: </h6>
+        <p>File manager is responsible for allocation of space on the disk storage and the data structure used to represent information storage on physical media.</p>
+
+        <h6>Data files:</h6>
+        <p>These are actual physical file which contain the data.</p>
+
+        <h6>Data Dictionary: </h6>
+        <p>Is used to store the meta data about the structure of the database. It also keep track of relationship that exists between various data structure.</p>
+
+        <h3 id="dbms_model">Database Modeling Concept</h3>
+        <p>A DBMS is used store information regarding an organization institute, etc. In order to represent this information in some kind of mapping or modeling is required so that the things which can be happening in real world can be simulated and stored in a computer database and some popular data models are: 
+        <ol>
+            <li>Hierarchical Model</li>
+            <li>Network Model</li>
+            <li>Relational Model</li>
+        </ol>
+        </p>
+        <h6>Hierarchical Model: </h6>
+        <img src="dbms/hierarichal_model.jpg" loading="lazy" alt="hierarichal_model">
+        <p>The data is stored Hierarchically using a down tree. This model uses pointer to navigate between stored data. It was the first DBMS Model.</p>
+
+        <h6>Network Model:</h6>
+        <img src="dbms/network_model.jpg" loading="lazy" alt="network_model">
+        <p>Like the hierarchical model, this model was pointer towards stored data. However it doesn't necessary use a downward tree structure.</p>
+
+        <h6>Relational Model: </h6>
+        <p>Data is stored in 2D form in rows and columns The data is manipulated based on the relational theory of mathematics. The data is organized in form of independent tables. A table consist of number of rows &#40 records of tuples &#41 and columns &#40 attributes &#41</p>
+
+        <h3 id="key">Key</h3>
+        <p>According to Edgar F. Codd a key has only one meaning, in relational theory. It is a set of one or more column whose combined values are unique from all concurrence. In a given table, a key is the relational means of specifying uniqueness.</p>
+        <p style="text-indent: 20px;">A key is a collection of attribute that maybe used to identify retrieve one or more records.</p>
+
+        <h4 id="types_keys">Types of Keys</h6>
+        <ol>
+            <li>Candidate Key</li>
+            <li>Super Key</li>
+            <li>Primary Key</li>
+            <li>Alternate Key</li>
+            <li>Foreign Key</li>
+            <li>Composite Key</li>
+        </ol>
+        <img src="dbms/keys/key.jpg" loading="lazy" alt="keys">
+        <h6>Candidate Key: </h6>
+        <p>A candidate key is set of one row and columns. Whose combined values and unique among all occurrence. A candidate key is a key that can be used to uniquely identify a record. It may be used to retrieve one specific record so it becomes a primary key.<br>In simple words, a candidate key is an attribute which can be selected as primary key.<br><strong>Note: All the keys are made from candidate key.</strong></p>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Branch</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>X</td>
+                <td>BCA</td>
+                <td>CS</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Y</td>
+                <td>BCA</td>
+                <td>CS</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Z</td>
+                <td>BCA</td>
+                <td>CS</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>A</td>
+                <td>BCA</td>
+                <td>CS</td>
+            </tr>
+        </tbody>
+        <caption style="text-align: left;"><strong>All the attributes/sets are candidate keys</strong> </caption>
+        </table>
+        <hr>
+        <h6>Super Key: </h6>
+        <p>A super key is a column or a set of columns. That uniquely identify a row within a table. The word 'super' denotes this superiority of a key, thus a super key is a super set of a key known as candidate key, it means a candidate key is obtained from super key only.</p>
+
+        <h6>Primary Key: </h6>
+        <p>A primary key in a table that uniquely identifies each row and column or set of columns in the table. The primary key is an attribute or a set of attributes that help to uniquely identify the tuples(records) in the relational table. The primary key provides the means to distinguish one tuple from all the others in the relation.
+            <ol>
+                <li><strong>Minimal: </strong>It is composed of a minimum number of attributes that satisfy the unique type of a record.</li>
+                <li><strong>Accessible: </strong>The Primary key is used to check the ability to access and interact with database.</li>
+                <li><strong>Not Null: </strong>It refers to a non null value.</li>
+            </ol>
+        </p>
+        <table>
+            <thead>
+            <tr>
+                <th>E.Id</th>
+                <th>E.Name</th>
+                <th>E.Section</th>
+                <th>E.Class</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>X</td>
+                <td>NULL</td>
+                <td>BCA</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Y</td>
+                <td>A-1</td>
+                <td>BCA</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Z</td>
+                <td>B-3</td>
+                <td>BCA</td>
+            </tr>
+        </tbody>
+        <caption style="text-align: left;"><strong>Primary Key: </strong>E.Id , E.Class</caption>
+        </table>
+        <hr>
+        <h6>Alternate Key:</h6>
+        <p>An alternate is candidate key which is not selected to the primary key</p>
+
+        <h6>Foreign Key: </h6>
+        <p>Foreign Key is a column that refers to the primary key/unique key of another table. So it demonstrates the relationship between tables and acts as the cross reference among them. It establish relationships between tables and also ensure consistency and integrity of data. A foreign key is applied to a column of one table which references the primary key of a column in another table.</p>
+
+        <h6>Compound Key:</h6>
+        <p>A compound key &#40 also called composite key &#41 or &#40 concatenate key &#41 is a key that consist of two or more attributes</p>
+        <hr>
+        <h4>All types of key explained through this example:</h4>
+        <img src="dbms/keys/all_keys.png" loading="lazy" alt="All Keys">
+        <h2 id="sql">Structured Query Language &#40 SQL &#41</h2>
+        <p>SQL is a widely used database language providing of data manipulation and creation. Almost all model relational database management system like MSSQL Server, Microsoft Access, Oracle, DBQ all use SQL as Standard Database Language.<br>In 1970, Edgar F. Codd published the paper with the help of relational algebra and proved that we store the data and fetch the data. The first name of the SQL is <strong>Simple English Query Language</strong>.</p>
+        <h3>SQL Syntax</h3>
+        <img src="dbms/sql/basic_sql_syntax.png" loading="lazy" alt="Syntax_SQL">
+        <h3>Basic SQL Commands</h3>
+        <img src="dbms/sql/sql_commands.png" loading="lazy" alt="Basic_SQL_commands">
+        
+        <h3>'ALTER' Command</h3>
+        <p>&#40 <strong>ALTER</strong> is used when we have to manipulate the core database attributes. Meanwhile <strong>UPDATE</strong> is used to update the database records. &#41</p>
+        <p>Change in schema:
+            <ul>
+                <li>Add column</li>
+                <li>Remove column</li>
+                <li>Modify column</li>
+                <li>Rename column/table</li>
+            </ul>
+            <ol type="i">
+                <li><strong>Add column:</strong><br>ALTER TABLE Student ADD Address varchar(30);</li>
+                <li><strong>Drop column:</strong><br>ALTER TABLE emp DROP COLUMN Address</li>
+                <li><strong>Modify:</strong><br>ALTER TABLE emp MODIFY Id varchar(20);</li>
+                <li><strong>Change column name:</strong><br>ALTER TABLE emp RENAME COLUMN I</li>
+                <li><strong>Change table name:</strong><br>ALTER TABLE emp RENAME to emp1</li>
+            </ol>
+        </p>
+        <img src="dbms/sql/ALTER_SQL.png" loading="lazy" alt="ALTER_SQL">
+
+        <h3>Constraints in SQL</h3>
+        <p>Constraints are the rules that we can apply on the type of data in a table. We can specify the limit on the type of data that can be stored in a particular column in a table using constraints.</p>
+
+        <h6>Rule 1- Unique Constraints</h6>
+        <p>The constraints specify with a column tells that all the values in the column must be unique.</p>
+
+        <h6>Rule 2- Not Null</h6>
+        <p>The primary key which refers not null value.</p>
+
+        <h6>Rule 3- Check Constraints</h6>
+        <p>This constraint helps to validate the values of a column to meet a particular condition i.e., it helps to ensure that the value stored in a column meet a specific condition.</p>
+
+        <h3>'INSERT' Command</h3>
+        <h6>Syntax</h6>
+        <p>INSERT INTO TABLE name VALUES(value1,value2, .... value n)</p>
+        <p><strong>Example: </strong><br>INSERT INTO emp(101,'Akbar',10000);<br>INSERT INTO emp VALUES(102,'Anthony',12000);</p>
+
+        <h3>'DELETE' Command</h3>
+        <p>A delete command is a DML command used to delete record from a table that is not required in the database. It removes the complete row from the table & produce that we need the delete permission on the target table to execute this command. It also allows us to filter & delete any specific records using the <strong>where</strong> clause from the table.</p>
+
+        <h3>'UPDATE' Command</h3>
+        <p>The update command is a DML command are used to modify the data that is already in the database. Update statement is used to change the data of the records held by the table.</p>
+
+        <h3>'TRUNCATE' Command</h3>
+        <p>The truncate command is a DDL command used to removes <strong>'complete data'</strong> from the table without removing the table structure. We can't us the <strong>where</strong> clause with this command.</p>
+
+        <h3>'SELECT' Command</h3>
+        <p>The select  statements is the most commonly used command in SQL. It is used to access the records from one or more database tables and view it, it also retrieve the selected data if that conditions are true.</p>
+        <img src="dbms/sql/sql_select.png" loading="lazy" alt="SQL_Select_Command">
+
+        <h3>SQL SELECT UNIQUE</h3>
+        <p>Select unique is an old syntax which was used in oracle description but later ANSI standard defines distinct as an official keyword.</p>
+
+        <h3>SQL SELECT DISTINCT</h3>
+        <p>Select distinct is used with select keyword to retrieve only distinct or unique data.</p>
+
+        <h3>SQL SELECT COUNT</h3>
+        <p>The SQL count is a function that returns the no of records of the table.</p>
+        <h3>SQL AND / OR</h3>
+        <p>The SQL AND Condition is used to create two or more conditions.</p>
+        <p>The SQL OR Condition is used in SQL query to create a SQL statement where records are return when any one condition is matched.</p>
+
+        <h3>Order By Clause</h3>
+        <p>Whenever we sort the records based on the column store in the table of the SQL database, then we consider using the order by clause in SQL means <strong>that all the values stored in the column on which we are applying order by clause will be sorted & we corresponding column values will be displayed in the sequence in which we have obtain values in earlier table.</strong></p>
+        <p><strong>Using the order by clause</strong> we can sort the records in ascending/descending order by our requirements. The records will sorted in ascending order, the <strong>ASC</strong> keyword & descending order will be <strong>DESC</strong> keyword.</p>
+
+        <h2 id="er-diagram">E-R Diagram [ Entity Relationship ]</h2>
+        <p>E-R model is a high level data model. This model is used to define the data elements & relationship for a specified system. It develops a conceptual design for the database & simple & easy design view of data.</p>
+        <h3>Component of E-R Diagram</h3>
+        <h4>Entity</h4>
+        <p>An entity may be any object, class, person or place. In the ER diagram, an entity can be represented as rectangle</p>
+        <img src="dbms/e-r/entity.jpg" loading="lazy" alt="er-diagram">
+        <h4>Attributes</h4>
+        <p>The attributes is used to describe the property of an entity, eclipse is used to represent an attribute.</p>
+        <img src="dbms/e-r/attributes.jpg" loading="lazy" alt="er-diagram2">
+        <h4>Relationship</h4>
+        <p>A relationship is used to describe the relation between entities. A diamond is used to represent the relationship.</p>
+        <h5>Types of Relationship</h5>
+        <h6>Onto One Relationship</h6>
+        <p>When only one instant of an entity is associated with relationship. It is known as one to one relationship.</p>
+        <img src="dbms/e-r/onto-one.jpg" loading="lazy" alt="er-onto-one">
+        <h6>One to Many Relationship</h6>
+        <p>When only one instance of entity on the left & more than one instance of entity on the right associated, the relationship with relationship. It is known as <strong>one to many relationship.</strong></p>
+        <img src="dbms/e-r/onto many.jpg" loading="lazy" alt="er-onto-many">
+        <h6>Many to One Relationship</h6>
+        <p>When more than one instance of entity on the left & only one instance of entity on the right associates with the relationship then it is known as <strong>many to one relationship.</strong></p>
+        <img src="dbms/e-r/many one.jpg" loading="lazy" alt="er-many-one">
+        <h6>Many to Many Relationship</h6>
+        <p>When more than one instance of entity on the left & more than one instance of entity on the right associated with relationship. It is known as <strong>many to many relationship.</strong></p>
+        <img src="dbms/e-r/many to many.jpg" loading="lazy" alt="er-many-many">
+        <h3>Weak Entity</h3>
+        <p>An entity set that doesn't processes sufficient attributes to form a primary key is called a <strong>weak entity set.</strong> A weak entity can't exit by itself & it depends on and identify entity set via an identified relationship set. An identified relationship is using a double diamond and a weak entity set is used to represent as double rectangle.</p>
+    </div>
+    <div id="banner">
+        <p><strong>Where to now?</strong></p>
+        <ul>
+            <li><a style="color:#004e92;"href="index.html"> Home</a></li>
+            <li><a href="se.html">Software Engineering</a></li>
+            <li><a href="cg.html">Computer Graphics</a></li>
+            <li><a href="ot.html">Optimization Techniques</a></li>
+            <li><a href="maths.html">Mathematics III</a></li>
+            <li><a style="color: #ff3853;"href="contact.html">Contact/Feedback</a></li>
+            <li><a href="#">Go To Top</a></li>
+    </ul>
+    </div>
+    <div id="banner" style="opacity: 0;"></div>
+    <script src="script.js"></script>
+</body>
+</html>

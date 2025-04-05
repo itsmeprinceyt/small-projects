@@ -1,0 +1,24 @@
+body{
+    background: #E0EAFC; 
+background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  
+background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+}
+p{
+    font-family: 'Jaldi';
+}
+h1{
+    font-family: 'Jaldi';
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}

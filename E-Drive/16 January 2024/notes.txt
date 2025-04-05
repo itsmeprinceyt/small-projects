@@ -1,0 +1,52 @@
+Introduction: https://www.dafontfree.io/studiosans-font-family/
+
+UNIT/CHAPTER: https://www.fontsquirrel.com/fonts/fira-sans / https://www.fontsquirrel.com/fonts/source-sans-pro
+
+Heading: https://www.dafont.com/roboto.font / https://fonts.google.com/noto/specimen/Noto+Sans+KR?preview.text=Introduction&query=Sans
+
+Pargraph: https://freefontsfamily.com/sassoon-infant-std-free/
+https://fonts.google.com/specimen/Quattrocento+Sans?preview.text=Introduction&query=Sans
+
+COLORS: https://ibb.co/nmhVZf9
+https://ibb.co/vJSqWGd
+
+Introduction Plate: #fff0db
+
+
+Introduction: StudioSans
+Unit/Chapter: SourceSans
+Heading NotSans
+
+HOME
+background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+FEEDBACK BACKGROUND
+background: #ee9ca7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+unchanged
+#banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 80%;
+    height: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%);
+    padding: 47px;
+    margin: auto;
+    text-align: center;
+}
+
+LINKS:
+https://t.me/itsmeprinceyt
+https://wa.link/q52old

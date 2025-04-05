@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container_noti">
+            <div class="reset-message">
+                <p>Are you sure you want to reset the score?</p>
+                <button class="yes">Yes</button>
+                <button class="no">No</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="game-title">
+                <p class="title">Rock Paper Scissors</p>
+            </div>
+            <div class="game">
+                <button class="js-paper js-button css-button" onclick="gamePlay('paper');">
+                    <img src="images/paper.png">
+                </button>
+                <button class="js-rock js-button css-button">
+                    <img src="images/rock.png">
+                </button>
+                <button class="js-scissors js-button css-button">
+                    <img src="images/scissors.png">
+                </button>
+            </div>
+            <div class="bottom-info">
+                <p class="js-result"></p>
+                <p class="js-moves"></p>
+                <p class="js-score"></p>
+                
+            </div>
+            
+            <div class="footer">
+                <button class="auto-play">Auto Play</button>
+                <button class="reset-button">Reset Score</button>
+                <button class="github">Github Repository</button>
+            </div>
+            <div class="noti"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

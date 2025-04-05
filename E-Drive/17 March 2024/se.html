@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering | E Drive - Mohd Uvaish</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="pages.css" type="text/css">
+    <link rel="icon" href="LogoPNG.png" type="image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/studio-sans" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Jaldi" rel="stylesheet">
+    <style>
+        body{
+            background: #8E2DE2; 
+            background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
+            background: linear-gradient(to right, #4A00E0, #8E2DE2);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html" class="active"><i class="fa fa-home"></i></a>
+        <div id="myLinks">
+            <hr>
+            <a href="index.html">Home</a>
+            <a href="cg.html">Computer Graphics</a>
+            <a href="dbms.html">Database Management System</a>
+            <a href="ot.html">Optimization Techniques</a>
+            <a href="maths.html">Maths III</a>
+            <a href="contact.html">Contact/Feedback</a>
+        </div>
+        <a href="javascript:void(0);" class="icon"><i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div id="banner">
+        <h4>Index</h4>
+        <ul>
+            <li><a href="#unit1">UNIT - I</a></li>
+                <ul>
+                    <li><a href="#char">Characteristics of Good Software</li>
+                        <li><a href="#cycle">Software Development Life Cycle</a></li>
+                        <li><a href="#types_models">Types of different Lifecycle Models</a>
+                        <ul type="disc">
+                            <li><a href="#cwm">Classical waterfall Model</a></li>
+                            <li><a href="#iwm">Iterative waterfall Model</a></li>
+                            <li><a href="#pm">Prototyping Model</a></li>
+                            <li><a href="#sm">Spiral Model</a></li>
+                        </ul></li>
+                    <li><a href="#srs">Parts of SRS Documents</a>
+                    <ul type="disc">
+                        <li><a href="#documents_srs">Documenting Functional Requirement</li>
+                            <li><a href="#properties_srs">Properties of a Good SRS Document</a></li>
+                            <li><a href="#problems_without_srs">Problem Without a SRS Document</a></li>
+                            <li><a href="#problem_with_unstructured_specification">Problem with an Unstructured Specification</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#decision_tree">Decision Tree</a></li>
+                    <li><a href="#decision_table">Decision Table</a></li>
+                    <li><a href="#sdesign">Software Design</a>
+                        <ul type="disc">
+                            <li><a href="#modular">Modularization</a></li>
+                            <li><a href="#a_modular">Advantages of Modularization</a></li>
+                            <li><a href="#concurrency">Concurrency</a></li>
+                            <li><a href="#Coupling_Cohesion">Coupling and Cohesion</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#design-verification">Design Verification</a></li>
+                    <li><a href="#FunctionOrientedDesign">Function Oriented Design</a></li>
+                    <li><a href="#object-oriented-design">Object Oriented Design</a></li>
+                    <li><a href="#SoftwareDesignApproach">Software Design Approach</a></li>
+                    <li><a href="#software-analysis">Software Analysis and Designed Tools</a>
+                        <ul type="disc">
+                            <li><a href="#dfd">DFD [Data Flow Diagram]</a></li>
+                            <li><a href="#type-of-dfd">Types of DFD</a></li>
+                            <li><a href="#dfd-component">DFD Components</a></li>
+                            <li><a href="#importanceOfDFD">Importance of DFD's in Input Software Design</a></li>
+                            <li><a href="#data-dictionary">Data Dictionary</a></li>
+                            <li><a href="#AdvantagesOfDFD">Advantages of DFD</a></li>
+                            <li><a href="#DisadvantagesOfDFD">Disadvantages of DFD</a></li>
+                            <li><a href="#levels-of-dfd">Level of DFD's</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#structured-design">Structured Design</a></li>
+                    <li><a href="#object-modeling-uml">Object-Modeling Using UML</a></li>
+                </ul>
+        </ul>
+    </div>
+    <div id="banner">
+        <h1 id="unit1">UNIT - I</h1>
+        <h2>Software Engineering</h2>
+        <p>The term software engineering is composed of two word, software and engineering. Software is more than just a program code. A program is an executable code, which servers some computational purpose.<br></p><p style="text-indent: 20px;">Software is consider to be executable programming code, associated libraries and documentations. Engineering on the other hand, is all about developing products using well defined scientific principle and methods.</p></p><p style="text-indent: 20px;">So we cab define software engineering as an engineering branch associated with the development of software product using the well define scientific principle  method and procedure.</p><p style="text-indent: 20px;">The outcome of software engineering is an efficient on reliable software products. <strong>IEEE</strong>&#40 Institute of Electrical and Electronics Engineers &#41 define software engineering as the application of systematic, discipline, quantifiable approach to the development, operation and maintenance of software. </p>
+
+        <h6>Need of Software Engineering</h6>
+        <p>The need of Software Engineering arise because of higher rate of change in user requirements and environment on which the software is working.</p>
+
+        <h6>Large Software</h6>
+        <p>It is easier to build a wall than to a house, likewise as the size of software become large, Engineering has to step up to give it a scientific procedure.</p>
+
+        <h6>Sociability</h6>
+        <p>If the software process were not based on scientific and engineering concept, it would be easier to recreate new software than to scale an existing one.</p>
+
+        <h6>Cost</h6>
+        <p>As hardware industry has shown its skills and view, manufacturing has lower down the price of computer and electronic hardware, but the cost of software remains high as proper process is not adopted.</p>
+
+        <h6>Dynamic Nature</h6>
+        <p>The always growing and adapting nature of software usually depends upon the environment in which the user work. If the nature of software is always changing, new enhancement need to be done. This is where software engineering place a good role.</p>
+        
+        <h6>Quality Management</h6>
+        <p>Better process of software development provides better and quality software product.</p>
+
+        <h3 id="char">Characteristics of Good Software</h3>
+        <p>A software product can be judged by what it offers and how well it can be used. This software must satisfy on the following grounds:
+            <ul>
+                <li>Operational</li>
+                <li>Transitional</li>
+                <li>Maintenance</li>
+            </ul>
+        </p>
+        <h4>Well Engineering</h4>
+        <h6>&#40i&#41 Operational</h6>
+        <p>This tell how well software works in operation. It can be measured on: 
+            <ul>
+                <li>Usability</li>
+                <li>Efficiency</li>
+                <li>Correctness</li>
+                <li>Functionality</li>
+                <li>Dependability</li>
+                <li>Security</li>
+                <li>Safety</li>
+            </ul>
+        </p>
+        <h6>&#40ii&#41 Transitional</h6>
+        <p>This aspect is important when the software is moved from one platform to another:
+            <ul>
+                <li>Inter operability</li>
+                <li>Reusability</li>
+                <li>Adaptability</li>
+            </ul>
+        </p>
+        <h6>&#40iii&#41 Maintenance</h6>
+        <p>This aspect briefs about how well a software has the capabilities to maintain itself in the ever changing environment: 
+            <ul>
+                <li>Modularity</li>
+                <li>Maintainability</li>
+                <li>Flexibility</li>
+                <li>Scalability</li>
+            </ul>
+        </p>
+        <hr>
+        <p>In short we can say software engineering is a way which tells us to make a software by using well define engineering concept required to efficient, durable, scalable, in budget and on time software product.</p>
+
+        <h3 id="cycle">Software Development Life Cycle</h3>
+        <h4>Lifecycle Model</h4>
+        <p>A Software Life Cycle model &#40 called as process model &#41 is a descriptive and diagrammatic representation of the software life cycle. A lifecycle model represents all the activities required to make a software product. In other words, a lifecycle model maps the different activities perform on a software software product from its inception to retirement. During any life cycle phase, more than one activity make also be carried out.</p>
+
+        <h4>Need for Software Life Cycle Model</h4>
+        <p>The development team must identify a suitable and then adhere to it. Without using of a particular life cycle model the development of a software product would not be in a systematic and disciplined manner. When a software product is being developed by a team there must be a clear understanding among team members about when and what to do. Otherwise it would lead to chaos and project failure.</p>
+
+        <h4 id="types_models">Types of different Lifecycle Models</h4>
+        <p>Many life cycle model have been proposed so far, each of them has some advantages as well as some disadvantages. A few important and commonly used lifecycle models are as follows:
+            <ol type="I">
+                <li>Classical waterfall Model</li>
+                <li>Iterative waterfall Model</li>
+                <li>Prototyping Model</li>
+                <li>Evolutionary Model</li>
+                <li>Spiral Model</li>
+            </ol>
+        </p>
+
+        <h5 id="cwm">Classical Waterfall Model</h5>
+        <img src="se/Models/Classif_waterfall_model.png" loading="lazy" alt="Classic_waterfall_model">
+        <h6>Feasibility Study</h6>
+        <p>The main aim of feasibility study is to determine wether it would be financially and technically feasible to develop the product.
+            <ol "type="i">
+                <li>At first, project manager or team leader try to have a rough understanding of what is required to be done by visiting the client side.</li>
+                <li>After they have an overall understanding of the problem they investigate the different solution that are possible. Then they examine each of the solutions in terms of what kind of resources required, what would be the cost of development and development time for each solution.</li>
+                <li>Based on this analysis they pick the best solution is feasible financially and technically.</li>
+            </ol>
+        </p>
+
+        <h6>Requirements Analysis and Specifications</h6>
+        <p>The aim of the requirements analysis and specifications phase is to understand the exact requirements of the customer and to document them properly.<br>This phase consist of two of the following activities: <br>
+        <strong>&#40i&#41 requirements gathering & analysis</strong><br><strong>&#40ii&#41 requirements specifications</strong>
+        <ul type="none">
+            <li><strong>&#40i&#41 Requirements gathering & analysis: </strong>The goal of the requirements gathering activity is to collect all relevant information from the customer regarding the product to be develop. This is done to clearly understand the customer requirement so that incompleteness are removed.<br>The requirement analysis activity is began by collecting all relevant data regarding the product to be developed from the users of the product and from the customer through interviews and discussion after that the next phase of the requirements is started. </li>
+            <li><strong>&#40ii&#41 Requirements specifications: </strong>During this activity, the user requirement are systematically organized into a Software Requirement Specification <strong>&#40 SRS &#41</strong> document. The customer requirements gathering and analysis activity are organized into a SRS document. The important component of this documents are functional requirement, non functional requirement and the goals of implementation.</li>
+        </ul>
+        </p>
+
+        <h6>Design</h6>
+        <p>The goal of the design phase is to transform the requirement of specified in the SRS document into a structure that is suitable for implementation in some programming language in a technical terms during the design phase the software architecture is derived from the SRS document. There are two different approaches are available:<br>
+        <strong>&#40i&#41 Traditional design approach</strong><br><strong>&#40ii&#41 Object oriented design approach</strong>
+        <ul type="none">
+            <li><strong>&#40i&#41 Traditional design approach: </strong>A structured analysis of the requirement specification is carried out where the detailed structure of the problem is examine. This is followed by the structured design activities. The result of structured analysis are transform into the software design.</li>
+            
+            <li><strong>&#40ii&#41 Object oriented design approach: </strong>In this technique, various object that occur in the problem domain end. The servicer domain are first identified and the different relationships that exist among these objects are identified.</li>
+        </ul>
+        </p>
+
+        <h6>Coding and unit testing</h6>
+        <p>The purpose of the coding phase &#40 sometimes called the Implementation phase &#41 of software development is to translate the software design into source code.<br>Each component of the design is implemented as a program module. The end product of this phase is a set of program modules that help in individually tested. It involves testing each module in a solution as this is the most efficient  way to debug the error identified at this stage.</p>
+
+        <h6>Integration and System testing</h6>
+        <p>Integration of different modules is undertaken once they have been coded and unit tested. During the integration and system testing phase, the modules are integrated in a plant manner. Integration is normally carried out incrementally over a number of steps. During each integration step, the partially integrated system is tested and a set of previously plant modules are added. Then finally, when all the modules have been successfully integrated and tested, system testing is carried out. The goal of system testing is to insure that the developed system of the develop software confirms to its requirement led out in the SRS document. <br>System testing usually consist of the three different kinds of testing activities:
+        <ul type="none">
+            <li><strong>&#40i&#41 Alpha Testing: </strong>It is the system testing perform by the development team.</li>
+            <li><strong>&#40ii&#41 Beta Testing: </strong>It is the system testing perform by a friendly set of customers.</li>
+            <li><strong>&#40iii&#41 Acceptance Testing: </strong>It is the system testing perform by the customer himself. After the product is delivered, it is determined whether to accept or again make changes to the delivered product. System testing is normally carried out in a plant manner according to the system test plant document.</li>
+        </ul>
+        </p>
+        <h6>Maintenance</h6>
+        <p>Maintenance is a typical software product act that requires much more than the effort necessary to develop the product itself. Maintenance effort is roughly in the 40 : 60 ratio.<br>Maintenance involves performing anyone or more of the following 3 kinds of activities:
+            <ul type="none">
+                <li><strong>&#40i&#41 Correcting errors </strong> that were not discover during the product development phase.</li>
+                <li><strong>&#40ii&#41</strong> Improving the implementation of the system and enhancing the functionalities of the system according to the customer's requirement. This is called <strong>perfective maintenance</strong>.</li>
+                <li><strong>&#40iii&#41</strong> Porting the software to work in a new environment. This is called <strong>Adaptive maintenance</strong></li>
+            </ul>
+        </p>
+
+        <h5 id="iwm">Iterative Waterfall Model</h5>
+        <p>To overcome the major short coming of the classical waterfall model, we came up with the iterative waterfall model.</p>
+        <img src="se/Models/Iterative_Waterfall_model.png" loading="lazy" alt="iterative_waterfall_model">
+        <p>Here, we provide feedback paths for error collection has detected later in any phase. The advantage of this model is that there is a working model of the system at a very early stage of development which makes it easier to find functional or design flaws.<br><br>The disadvantage with this SDLC <strong>&#40 Software Development Life Cycle &#41</strong> model is that it is applicable only to large and bulky software development project.</p>
+
+        <h5 id="pm">Prototyping Model</h5>
+        <p>A prototype is a toy implementation of the system. A prototype usually exhibits limited functional capabilities, low reliability and insufficient performance compared to the actual software. A prototype is usually built using several shortcuts. The shortcuts might involve using inefficient, inaccurate or dummy functions. A prototype usually turns out to be a very crude version of the actual system.</p>
+
+        <h6>Need for a prototype in software development</h6>
+        <p>There are several uses of a prototype. An important purpose is to illustrate the input data formats, messages, reports and the interactive dialogue to the customer. This is a valuable mechanism for gaining better understanding of the customer need.
+            <ol type="i">
+                <li>How the screen might look like?</li>
+                <li>How the user interface would behave?</li>
+                <li>How the system would produce output?</li>
+            </ol>
+        <p>Another reason for developing a prototype is that it is impossible to get the perfect product in the first attempt. The experience gain in developing the prototype can be used to develop the final product.</p>
+        </p>
+        <img src="se/Models/prototype_model.jpeg" loading="lazy" alt="prototyping_model">
+        
+        <h5 id="im">Incremental Model</h5>
+        <p>It is also called a <strong>successive version model</strong>. At first, a simple working model is built. It under goes functional improvement and we keep on adding new function till the desired system is built.</p>
+        <ul>
+            <li><strong>Application</strong>
+                <ul type="circle">
+                    <li>Large project where you can easily find modules for incremental implementation.</li>
+                    <li>Also used in object-oriented software development because the system can be easily portion into units in terms of objects.</li>
+                </ul>
+            </li>
+            <li><strong>Advantages</strong>
+                <ul type="circle">
+                    <li>User gets a chance to experiment partially developed system.</li>
+                    <li>Reduce the error because the four modules get tested.</li>
+                </ul>
+            </li>
+            <li><strong>Disadvantages</strong>
+                <ul type="circle">
+                    <li>It is difficult to divide the problem into several versions that would be acceptable to the customer which can be incrementally implemented and delivered.</li>
+                </ul>
+            </li>
+        </ul>
+        <img src="se/Models/Incremental_Model.jpg" loading="lazy" alt="Incremental_model">
+        
+        <h5 id="sm">Spiral Model</h5>
+        <img src="se/Models/Spiral_model.jpg" loading="lazy" alt="Spiral Model">
+        <p>The Diagrammatic representation of this model appears like a spiral with many loops. The exact number loops in the spiral is not fixed. Each loop of the spiral represents a phase of the software process.<strong>For example, the innermost loop might be concerned with feasibility study, the next loop with requirement specifications, the next one with design and so on.</strong> Each phase in this model is split into four section.</p>
+        <ol type="1">
+            <li><strong>First Section &#40 Objective Identification &#41</strong>
+                <ol type="a">
+                    <li>During the first sector, it is needed to identify the objective of phase.</li>
+                    <li>Examine the risk associated with these objective.</li>
+                </ol>
+            </li>
+            <li><strong>Second Sector &#40 Risk Assessment & Reduction &#41</strong>
+                <ol type="a">
+                    <li>A detailed analysis is carried out for each identified project risk.</li>
+                    <li>Steps are taken to reduce the risk.<strong>For example, if there is a risk that the requirements are inappropriate, the prototype system may be developed.</strong></li>
+                </ol>
+            </li>
+            <li><strong>Third Sector &#40 Development & Validation &#41</strong>
+                <ol type="a">
+                    <li>Develop and Validate the next level of the product after resolving the identified risk.</li>
+                </ol>
+            </li>
+            <li><strong>Fourth Sector &#40 Review and Planning &#41</strong>
+                <ol type="a">
+                    <li>Review the result achieve so far with the customer and plan the next iteration around the spiral.</li>
+                    <li>More complete version of the software gets built with each iteration around the spiral.</li>
+                </ol>
+            
+            </li>
+        </ol>
+
+        <h6>Circumstances to use Spiral Model</h6>
+        <p>The spiral model is called a <strong>Meta Model</strong> since it encapsulates all other life cycle models. Risk handling is inherently build into this model. The spiral model is suitable for development technically challenging software product. However this model is much more complex than the other model.</p>
+
+        <h6>Comparison of different Life Cycle Model</h6>
+        <p>The classical waterfall model can be considered of basic and all other life cycle model as embellishment of this model. However the classical waterfall model cannot be used in practical development projects. This program is overcome in the iterative waterfall model. The iterative waterfall model is most widely used software development model so far. For this model, it's simple to understand and use. This is not suitable for very large projects and for projects that are subject too many risk.</p><p style="text-indent: 20px;">The prototyping model is suitable for projects for which either the user requirements or the underline technical aspect are not well understood. This model is specially popular for development user interface part of the projects.</p><p style="text-indent: 20px;">The incremental approach suitable for large problems which can be composed into a set of modules for incremental development and delivery. This model is also widely used for object oriented development projects. The spiral model suitable for development for technically challenging software product that have several kinds of risk. This is more complex than the other models that's why this is not used in ordinary project.</p>
+
+        <h6>Requirements Analysis and Specification</h6>
+        <p>Before we start to develop any software it becomes quiet essential for us to understand and document the exact requirement of the customer. Experienced members of the development team carry out t his job. They are called <strong>system analyst.</strong></p>
+        <p style="text-indent: 20px;">The analyst starts requirement gathering analysis activity by collecting all information from the customer and then analyze the collecting information to obtain a clear thorough understanding of the product to be developed. With a view to remove to remove on ambiguities  and inconsistency from the initial customer perception of the problem.<br><br><strong>The following basic questions should be clearly understood by the analyst: </strong>
+        <ol style="font-weight: bold;"type="1">
+            <li>What is the problem?</li>
+            <li>Why is it important to solve the problem?</li>
+            <li>What are the possible solution to the problem?</li>
+            <li>What exactly are the data input to the system and what exactly are the data output by the system?</li>
+            <li>What are the likely complexities that might arise while solving the problem?</li>
+            <li>If there are external software or hardware with which the developed software has to interface, then what exactly would be data inter chain formats with the external system be?</li>
+        </ol>
+        </p>
+
+        <h3 id="srs">Parts of a SRS Document</h3>
+        <p>The important parts of SRS documents are:
+            <ul type="circle">
+                <li>Functional Requirements of the system.</li>
+                <li>Non-Functional requirements of the system.</li>
+                <li>Goals of implementation.</li>
+            </ul>
+        </p>
+
+        <h6>Functional Requirements</h6>
+        <p>The functional requirements part discusses the functionalities requirement from the system. The system is considered to perform a set of <strong>high level functions[ f<sub>i</sub> ].</strong> Each function ' f<sub>i</sub> ' of the system can be considered as <strong>a transformation of set of input data [ i<sub>i</sub> ] to the corresponding set of output data [ O<sub>i</sub> ].</strong> The user can get some meaningful piece of work done using a high level function.</p>
+        <img src="se/SRS_Document.jpg" loading="lazy" alt="Functional_Requirement">
+        <p><strong>Non-functional Requirements</strong> deal with the characteristics of the system which can't be expressed as functions such as <strong>the maintenance of the system, portability of the system usability of the system.</strong></p>
+
+        <h6>Goals of Implementation</h6>
+        <p>The goals of Implementation part documents some general suggestion regarding development. These suggestion guide trade of among design goals. The goals of implementation session might <strong>document issue</strong> such as <strong>revision to the system functionalities that may be required in the future, </strong>new devices to be supported in the future, <strong>re-usability issues,etc.</strong> These are the items which the developers might keep in their mind during development.</p>
+
+        <h6>Identifying functional Requirements from a Problem Description</h6>
+        <p>The high level functional requirement often need to be identify either from an informal problem description document or from a conceptual understanding of the problem. The high level requirement characterized a way of system uses by some user to perform some meaningful piece of work. There can be many types of users of a system & their requirements from the system may be very different. So, it is often useful to identify the different types of users who might use the system & then try to identify the requirements from each user's perception.
+            <br>
+            <strong>eg. Consider the case of the library system where,<br>f<sub>i</sub> - search book function</strong><br><strong>strong - author's name<br>output - details of the author's book 7 location of these books in the library.</strong>
+            <br>So, the function 'Search book' { f<sub>i</sub> } takes the author's name & transforms it into book detail.
+            </p>
+
+        <h4 id="documents_srs">Documenting functional Requirement</h4>
+        <p>For documenting the functional requirements we need to specify the set of functionalities supported by the system. A function can be specified by identifying the state at which the data is to be input to the system, it's input data domain, the output data domain & the type of processing to be carried on the input data to obtain the output data.<br><strong>Example:</strong> Withdrawal cash from ATM</p>
+        
+        <h6>R<sub>1</sub> &rarr; Withdraw Cash</h6>
+        <p>First determine the type of account that the user have & the account number from which the user wishes to withdraw cash. Check the balance to determine whether the requested amount is available in the account. if enough balance is available, it outputs required cash otherwise it generates an error message.</p>
+
+        <h6>R<sub>1.1</sub> &rarr; Select Withdraw Amount Option</h6>
+        <p><strong>input &rarr;</strong> withdraw amount option<br><strong>output &rarr;</strong> user prompted to enter the account type</p>
+        
+        <h6>R<sub>1.2</sub> &rarr; Select Account Type</h6>
+        <p><strong>input &rarr;</strong> user option<br><strong>output &rarr;</strong> prompt to enter amount</p>
+
+        <h6>R<sub>1.3</sub> &rarr; Get Required Amount</h6>
+        <p><strong>input &rarr;</strong> amount to be withdrawn in integer value greater than 100 & less than 1000 in multiples of 100.<br><strong>output &rarr;</strong> the requested cash & printed transaction statement.<br><strong>processing &rarr;</strong> the amount is debited from the user's account if sufficient balance is available otherwise an error message is displayed.</p>
+
+        <h4 id="properties_srs">Properties of a Good SRS Document</h4>
+        <p>The important properties of a good SRS Document are the following:</p>
+        <p style="font-size: 17px;"><strong>Concise</strong></p>
+        <p style="text-indent: 20px;">The SRS Document should be concised & at same time unambiguous, consistent & complete, verbose & if relevant description reduce readability & also increase error possibilities.</p>
+        
+        <p style="font-size: 17px;"><strong>Structure</strong></p>
+        <p style="text-indent: 20px;">It should be well structured. A well structured document is easy to understand & modify.</p>
+
+        <p style="font-size: 17px;"><strong>Black Box View</strong></p>
+        <p style="text-indent: 20px;">It should only specify what the system should do & refrain from stalking how to do these. This means that the SRS Document should specify the external behaviour of the system & not discuss the implementation issue. The SRS Document should view the system to be developed as black box & should specify the externally visible behaviour of the system. For this reason the SRS Document is also called <strong>the black box specification of the system.</strong></p>
+
+        <p style="font-size: 17px;"><strong>Conceptual Integrity</strong></p>
+        <p style="text-indent: 20px;">It should show conceptual integrity so that the reader can easily understand it.</p>
+
+        <p style="font-size: 17px;"><strong>Response to Undesired Event</strong></p>
+        <p style="text-indent: 20px;">It should characterized acceptable responses to undesired event. These are called <strong> response to exceptional conditions.</strong></p>
+
+        <p style="font-size: 17px;"><strong>Verifiable</strong></p>
+        <p style="text-indent: 20px;">All requirements of the system as documented in the SRS Document should be verifiable. This means that its should be possible to determine whether or not requirements have been made in an implementation.</p>
+
+        <h4 id="problems_without_srs">Problem Without a SRS Document</h4>
+        <p>The important problem that an organization would face if it doesn't develop a SRS Document are as following -</p>
+        <ol type="i">
+            <li>Without developing the SRS Document, the system would not be implemented according to customer's need.</li>
+            <li>Software developers would not know whether what they are developing is what exactly required by the customer.</li>
+            <li>Without SRS Document, it will be very much difficult for the maintenance engineers to understand the functionalities of the system.</li>
+            <li>It will be very much difficult for users document writers to write the suer's manual properly without understanding the SRS Document.</li>
+        </ol>
+
+        <h4 id="problem_with_unstructured_specification">Problem with an Unstructured Specification</h4>
+        <p>&rarr; It would be very difficult to understand that document.<br>&rarr; It would be very much difficult to modify that document.<br>&rarr; Conceptual integrity in that document would not be shown.<br>&rarr; The SRS document might be incomplete & inconsistent.</p>
+
+        <h4 id="decision_tree">Decision Tree</h4>
+        <p>A decision tree gives a graphic view of the processing logic involved in decision making & the corresponding actions taken. The edges of a decision tree represent conditions & the leaf node represents the actions to be perform depending on the outcome of testing the condition.</p>
+        <p><strong>Example: </strong>Consider library membership automation software [LMS] where it should support the following three option:
+        <ul type="none">
+            <li>&rarr; New Member</li>
+            <li>&rarr; Renewal</li>
+            <li>&rarr; Cancel Membership</li>
+        </ul></p>
+
+        <h5>New Member Option</h5>
+        <h6>Decision</h6>
+        <p>When the new member option is selected the software ask details about the member like <strong>member's name, address, phone no, etc.</strong><strong></strong></p>
+        <h6>Action</h6>
+        <p>If proper information is entered then a membership record for the member is created & a bill is printed for the annual membership charge + the security deposit payable.</p>
+
+        <h5>Renewal Option</h5>
+        <h6>Decision</h6>
+        <p>If the renewal option is chosen, the LMS ask for the members name & his membership number to check whether he is a valid member or not.</p>
+
+        <h6>Action</h6>
+        <p>If the membership is valid then membership expiry date is updated & the annual membership bill is printed, otherwise an error message is displayed.</p>
+
+        <h5>Cancel Membership Option</h5>
+        <h6>Decision</h6>
+        <p>If the cancel membership option is selected then the software ask for member's name & his membership number.</p>
+
+        <h6>Action</h6>
+        <p>The membership is cancelled, a cheque for the balance amount due to the member is printed & finally the membership record is deleted from the database.</p>
+        <img src="se/Library Software.jpg" loading="lazy" alt="Algorithm_Library_Software">
+        <br>
+        <h4 id="decision_table">Decision Table</h4>
+        <p>A decision table is used to represent the complex processing logic in a tabular or a matrix form. The upper rows of the table specify the variables or conditions to be evaluated. The lower rows of the table specify the action to be taken when the corresponding conditions are satisfy. A column in a table is called <strong>Rule</strong>.<br>Rule implies that if a condition is true, then the corresponding action is to be executed.</p>
+        <table>
+            <thead>
+                <th style="text-align: left;" colspan="5"><strong>Conditions</strong>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: left;">Valid Selection</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">New Member</td>
+                    <td>- </td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Renewal</td>
+                    <td>-</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Cancellation</td>
+                    <td>-</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <th style="text-align: left;" colspan="5"><strong>Actions</strong>
+                </th>
+                <tr>
+                    <td style="text-align: left;">Display error message</td>
+                    <td>x</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Ask member's details</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Build customer records</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Generate bill</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Ask member's name & membership number</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Update expiry date</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Print cheque</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">Delete record</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>x</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h2 id="sdesign">Software Design</h2>
+        <p>Software Design is a process to transform user requirement into some suitable forms which helps the programmer in software coding & implementation. For accessing user requirement and SRS Document is created whereas for coding and Implementation, there is a need of more specific and detailed requirements in software terms. The output of this process can directly be used into implementation in programming language. Software design is the first step in SDLC <strong>&#40 Software Design Life Cycle &#41</strong> , which moves consubstantial from problem domain to solution domain.</p>
+        <p style="text-indent: 20px;">It tries to specify how to fulfill the requirement mention in SRS.</p>
+        <h3>Software Design Levels</h4>
+        <p>There are three levels of software design.</p>
+        <ul>
+            <li>Architectural Design</li>
+            <li>High Level Design</li>
+            <li>Detailed Design </li>
+        </ul>
+        
+        <h4>Architectural Design</h4>
+        <p>The architectural design is the highest abstract version of the system. It identifies the software as a system with many component interactive with each other at this level, the designer get the idea of proposed solution domain.</p>
+        
+        <h4>High Level Design</h4>
+        <p>The high level design breaks single entity, multiple component concept of architectural design into less abstract view of sub system modules and depicts their interaction with each other. High level design focuses on how the system along with all of its components can be implemented in form of modules. It recognize modular structure of each sub system and their relation and interaction among each other.</p>
+        
+        <h4>Detailed Design</h4>
+        <p>Detailed design deals with the implementation part of what is seen as a system and its sub system in the previous tool designs. It is more detailed towards modules and their implementation. it defines logical structure of each module and their interfaces to communicate with other modules.</p>
+
+        <h3 id="modular">Modularization</h3>
+        <p>Modularization is a technique to divide a software into multiple discrete and independent modules, which are expected to be capable of carrying out the task separately. These modules may work as a basic construct for the entire Software. Designers tends to design modules such that they can be executed and compiled separate and independent. Modular design unintentionally follows the rules of divide and conquer problem solving technique. This is because there are many other benefits attached with the modular design of a software.</p>
+
+        <h3 id="a_modular">Advantages Of Modularization</h3>
+        <ol type="1">
+            <li>Smaller Components are easier to maintain.</li>
+            <li>Program can be divided based on functional aspect.</li>
+            <li>Desired Level of Abstraction can be brought into the program.</li>
+            <li>Components which high cohesion can be reused again.</li>
+            <li>Concurrent execution can be made possible. Desired from security aspect.</li>
+        </ol>
+        <h4 id="concurrency">Concurrency</h4>
+        <p>In Software Design, concurrency is implemented by splitting the software into multiple independent unit of execution, like modules and executing them in parallel. In other words, concurrency provides capability to the software to execute more than one part of code in parallel to each other. It is necessary for the programmers and designer to recognize those modules, which can be made parallel execution.<br><strong>eg, The spelling check feature in word processor is a module of software, which runs alongside the word processor itself.</strong></p>
+
+        <h4 id="Coupling_Cohesion">Coupling and Cohesion</h4>
+        <p>When a software program is modularized, its task are divided into several modules based on some characteristics. As we know, modules are set of instructions put together in order to achieve some task. They are considered as single entity but may refer to each other to work together. There are measures by which the quality of a design of modules and their interaction among them can be measured. The measures are called as <strong>coupling and cohesion.</strong></p>
+
+        <h4>Cohesion</h4>
+        <p>Cohesion is a measure that defines the degree introdependibility within element of a module. The greater the cohesion, the better is the program design. There are seven types of cohesion- </p>
+        <ol type="i">
+            <li><strong>Coincidental Cohesion- </strong>It is unplanned cohesion, which might be the result of breaking the program into smaller modules for the sake of modularization. It may server confusion to the programmers and is generally not accepted.</li>
+            <li><strong>Logical Cohesion: </strong>When logically categorized element are put together into a module, It is called logical cohesion.</li>
+            <li><strong>Temporal Cohesion: </strong>When elements of modules are organized such that they are processed at a similar point in time, it is called <strong>temporal cohesion.</strong></li>
+            <li><strong>Procedural Cohesion: </strong>When elements of module are grouped together, which are executed sequentially in order to perform task, it is called <strong>procedural cohesion.</strong></li>
+            <li><strong>Communicated Cohesion: </strong>When elements of module are grouped together, which are executed sequentially and work on same data ( information ). It is called <strong>communicational cohesion.</strong></li>
+            <li><strong>Sequential Cohesion: </strong>When element of module are grouped because the output of one element serve as input to another and so on, it is called <strong>sequential cohesion.</strong></li>
+            <li><strong>Functional Cohesion: </strong>It is considered to be the highest degree of cohesion, and it is highly expected. Elements of module in functional cohesion a grouped because they all contribute to a single well define function. It can also be reused.</li>
+        </ol>
+
+        <h4 id="coupling">Coupling</h4>
+        <p>Coup0ling is a measure that defines the level of interdependability among modules of a program. It tells that what level the modules interfere and interact with each other. The lower the coupling, the greater the program. There are five levels of coupling- </p>
+        <ol type="i">
+            <li><strong>Content Coupling: </strong>When a module can directly access or modify or refer to the content of another module, it is called content level coupling.</li>
+            <li><strong>Common Coupling: </strong>When multiple modules helps read and write access to same global data. It is called <strong>common</strong> or <strong>global coupling.</strong></li>
+            <li><strong>Control Coupling: </strong>Two modules are called control coupled. If one of them decides the function of the other module changes its execution.</li>
+            <li><strong>Stamp Coupling:- </strong>When multiple modules share common data structure & work on different part of it, it is called <strong>stamp coupling.</strong></li>
+            <li><strong>Data Coupling: </strong>Data coupling is when two modules interact with each other while means of passing data [as parameter]. If a module passes data structure as parameter, then the receiving module should use all its components.</li>
+        </ol>
+        
+        <h2 id="design-verification">Design Verification</h2>
+        <p>The output of software design process is design documentation pseudo codes, detailed logic diagrams, process diagrams & detailed description of all functional & non-functional requirements.</p>
+        <p>The next phase, which is the implementation of software, depends on all outputs mention above. It is then becomes necessary to verify output before preceding to the next phase. The early any mistake is detected, the greater it is or it might not be detected until testing of the products. If the outputs of design phase is in formal notation form, then their associated tools for verification should be used otherwise a thorough design review can be used for verification & validation.</p>
+        <p>A good design review is important for good software design, accuracy & quality.</p>
+
+        <h2 id="FunctionOrientedDesign">Function Oriented Design</h2>
+        <p>In function oriented design, the system is comprised of many small sub system known as functions. These functions are capable of performing significant task in the system. The system is considered as <strong>top view of all function.</strong> Function oriented design inherit some properties of structure design where divide & conquer methodology is used. This design mechanism divides the whole system into smaller functions, which provides means of abstraction by concealing the information & their operation. </p>
+        <p>Another characteristics of fun is that <strong>when a program calls a function, the function changes the state of the program. Sometimes is not acceptable by other modules.</strong></p>
+        <p>Function oriented design works well where the system state doesn't matter & program/fun work on input rather than on a state.</p>
+
+        <h3>Design Process</h3>
+        <p>The whole system is seen as how data flows in the system by means of data flow diagram.</p>
+        
+        <h4>DFD [Data Flow Diagram]</h4>
+        <ul >
+            <li>It depicts how function change the data & state of entire system.</li>
+            <li>The entire system is logically broken down into smaller units known as functions on the basis of their operations in the system.</li>
+            <li>Key function is then described at large.</li>
+        </ul>
+
+        <h2 id="object-oriented-design">Object Oriented Design</h2>
+        <p>Object oriented design works around the entities & their characteristics instead of functions involved in the software system. The whole concept of Software solution revolves around the engaged entities.</p>
+        <p>The important concept of object oriented design- </p>
+        <ol type="1">
+            <li><strong>Object: </strong>All entities involve in solution design are known as object. Every entity has some attributes associated to it & has some methods on the attribute.</li>
+            <li><strong>Classes: </strong>A class is a generalized description of an object. An object is an instance of a class. Class defines all the attributes, which an object can have methods, which defines the functionality of the object. In the solution design, attributes are stored as variables & functionalities are defined by means of method or procedures.</li>
+            <li><strong>Encapsulation: </strong>The attributes [data variables] & the methods [operation on the data] are bundled together is called <strong>encapsulation.</strong> Encapsulation not only bundles important information of an object together, but also restrict abstract of data & methods from the outside worlds. This is called <strong>information hiding.</strong></li>
+            <li><strong>Inheritance: </strong>Object oriented design allows single classes to stack up in hierarchical manner where the lower or such classes can import, implement & reuse allow variables & methods from where immediate super classes. This property of object oriented design is known as <strong>inheritance.</strong></li>
+            <li><strong>Polymorphism: </strong>Object oriented design languages provide a mechanism where methods performing similar task but vary in arguments, can be assigned same name. This is called <strong>polymorphism</strong>, which allows a single interface performing task for different types.</li>
+        </ol>
+        <h3>Design Process</h3>
+        <p>Software design process can be perceived as a series of well defined steps. It may varies according to design approach [fun oriented or object oriented]. It may have the following steps involves:</p>
+        <ul>
+            <li><strong>A solution design is created from requirements or previous used system & system sequence diagrams.</strong></li>
+            <li><strong>Objects are identified & grouped into classes on behalf of similarity in attribute characteristics.</strong></li>
+            <li><strong>Class hierarchy & relation among them are define.</strong></li>
+            <li><strong>Application frame work is defined.</strong></li>
+        </ul>
+
+        <h2 id="SoftwareDesignApproach">Software Design Approach</h2>
+        <p>There are two generic approach for software designing-</p>
+        <ol type="i">
+            <li><strong>Top-Down Design: </strong>We know that a system is composed of more than one sub-system and it contains a number of components. Further,  these sub systems and components may have there one set of sub system and components of are creates hierarchical structure in the system.<br>Top-Down design takes the whole software system as one entity and when decomposes it to achieve more than one sub-system or components based on some characteristics. Each sub-system or component is then treated as a system and decomposed further. This process keeps on running until the lowest level of system in the top down hierarchy is achieved. Top-Down design is more suitable when the software solution needs to be design from scratched and specific details are unknown.</li>
+            <li><strong>Bottom-Up Design: </strong>The Bottom-Up design model starts with the most specific and basic components, it precedes with composing higher level of components. It keeps dealing higher level component until the desired system is not evolved as one single component with each higher level, the amount of abstraction is increased.<br>Bottom-Up Design is more suitable when a system needs to be created from sum existing system, where the basic preemptive can be use in the new system. Both Top-Down and Bottom-Up approaches are not practical individually. Instead, a good combination of both is used.</li>
+        </ol>
+        <h3 id="software-analysis">Software Analysis and Designed Tools</h3>
+        <p>Software analysis and designed includes all activities. Which helps the transformation of requirement specification includes implementation. Requirement specification specify all functional & non-functional expectation from the software. These requirement specification come in the shape of human readable and understandable documents. Software Analysis and Design is the intermediate stage, which helps human readable requirements to be transformed into actual code. There are four analysis and design tools used by software designers.</p>
+
+        <h4 id="dfd">(i) DFD [Data Flow Diagram]</h4>
+        <p>Capable of depicting incoming data flow & stored data. The DFD doesn't mention about how data flows through the system. There is a difference between <strong>DFD &Flowchart</strong>. The flowchart depict flow of control in program module, DFD depict flow of data in the system at various levels. DFD doesn't contain any control over branch elements.</p>
+        <h4 id="type-of-dfd">Types of DFD</h4>
+        <ol type="1">
+            <li><strong>Logical DFD: </strong>This type of concentrates on the system process & flow of data in the system.<br><strong>For Example:</strong> In a banking software, how data is moving between different entities.</li>
+            <li><strong>Physical DFD: </strong>This types of DFD, shows how the dataflow actually implemented in the system. It is more specific & close to the completion.</li>
+        </ol>
+        <h4 id="dfd-component">DFD Components</h4>
+        <p>DFD can show / represent, destination storage & flow of data using the following set of component</p>
+        <img src="se/DFD-components.jpg" loading="lazy"alt="DFD-components">
+        <ol type="1">
+            <li><strong>Entities: </strong>Entities are source and destination of information, entities are represented by rectangles with there respective names.</li>
+            <li><strong>Process: </strong>Activities and action taken on the data are represented by circle.</li>
+            <li><strong>Data store: </strong>There are two variants of data storage, it can either be <strong>represented as a rectangle with actions of both smaller size or as an open sided rectangle with only one side missing.</strong></li>
+            <li><strong>Data flow:</strong>Movement of data is shown by quanted arrows. Data movement is shown to from the base of arrow as <strong>its source towards head of the arrows as destination.</strong></li>
+        </ol>
+        
+        <h4 id="importanceOfDFD">Importance of DFD's in Input Software Design</h4>
+        <p>The main reason why DFD's technique is so popular is because of the fact DFD is very simple to understand & use. Starting with a set of of high level function that a system performs are DFD model hierarchically represents various sub functions. The data flow diagramic technique also follows a very simple set of informative concept & rules DFD is an elegant modeling technique that turns out to be useful not only to represent the results of structured analysis of a software problem, but also form several other applications such as <strong>showing the flow of documents or items in an organization.</strong></p>
+        
+        <h4 id="data-dictionary">Data Dictionary </h4>
+        <p>A data dictionary list or data items appearing in the DFD model of a system. A data dictionary list the purpose of all data items & the definition of all composite  data items in terms of their components data items.</p>
+        <p>There are some preemptive data items using the following data definition operations.</p>
+        <p><strong>+ [Addition Sign]</strong>: Denotes composition of two data items.</p>
+        <p><strong>, [Comma Sign]</strong>: Represents selection, that is any one of data items listed in the brackets can occur.</p>
+        <p><strong>( ) [Parenthesis]</strong>: The content inside the brackets represent optional data which may or may not appear.</p>
+        <p><strong>{ } [Curly Brackets]</strong>: Represents iterative data definition.</p>
+        <p><strong>= [Equal Sign]</strong>: Represent equivalence.</p>
+        <p><strong>/* */ [Forward slash with asterisk]</strong>: Anything appearing within this symbol considered as a comment.</p>
+
+        <h4 id="AdvantagesOfDFD">Advantages of DFD</h4>
+        <ol type="1">
+            <li><strong>Easy to understand: </strong>DFD's are graphical representation that are easy to understand & communicate making them useful for non-technical and team members.</li>
+            <li><strong>Include System Analysis: </strong>DFD's are useful for analyzing & system process & data  flow which can help identify problems that may exist in the system. </li>
+            <li><strong>Support System Design: </strong>DFD's can be used to design & system's architecture & structure, which can help ensure that the system is design to meet the requirements of the client.</li>
+            <li><strong>Enables Texting & Verification: </strong>DFD's can be used to identify the inputs & outputs of the system, which can help in the texting & verification of the system's functionality.</li>
+            <li><strong>Facilitate Documentation: </strong>DFD's provides a visual representation of a system, making it easier to document & maintain the system.</li>
+        </ol>
+
+        <h4 id="DisadvantagesOfDFD">Disadvantages of DFD</h4>
+        <ol type="1">
+            <li><strong>Can be time consuming: </strong>Creating DFD's can be a time consuming process, specially for complex system.</li>
+            <li><strong>Limited focus: </strong>DFD's focus on the flow of the data in a system & may not capture other important aspect of the system, such as user interface design, system security or system performances.</li>
+            <li><strong>Can be difficult to keep up-to-date: </strong>DFD's may become out of date overtime as the system evolves & changes.</li>
+            <li><strong>Required technical expertise: </strong>While DFD's are easy to understand, creating them requires to certain level of technical expertise for the system being analyzed.</li>
+        </ol>
+
+        <h2 id="levels-of-dfd">Level of DFD's</h2>
+        <h4>Level Zero DFD</h4>
+        <p>This is the highest level DFD which provides an overview of the entire system. It shows the major processes data flow & data stores in the system, without providing any details about the internal working of these processes.</p>
+        <h4>Level One DFD</h4>
+        <p>This level provides a more detailed view of the system by breaking down the major processes identified in the level zero DFD into sub processes. Each sub process is defected as a separate process on the Level one DFD. Data close and data stores associated with each sub processes.</p>
+        <h4>Level Two DFD</h4>
+        <p>This level provides an even more detailed view of the system by breaking down the sub processes identify in the Level One DFD into further sub processes.</p>
+        <h4>Level Three DFD</h4>
+        <p>This is the most detailed level of the DFD's which provides a detailed view of the processes, data flow and data stores in the system. This level is used for complex system, where one high level of detailed is required to understand the system, each process on the Level Three DFD is depicted with a detailed description of its input, processing and output.</p>
+        <p><strong>Example: Make a DFD for railway reservation.</strong></p>
+        <img src="se/DFD-levels/level-one.jpg" loading="lazy" alt="level-one-dfd">
+        <img src="se/DFD-levels/level-two.jpg" loading="lazy" alt="level-two-dfd">
+        <img src="se/DFD-levels/level-three.jpg" loading="lazy" alt="level-three-dfd">
+        <h2 id="structured-design">Structured Design</h2>
+        <p>The aim of structured design is to transform the result of structured analysis (DFD Representation ) into a structure chart. Structured Design provides two methods to guide & transformation of a DFD into a structure chart- <br><strong>(i) Transform Analysis<br>(ii) Transaction Analysis</strong><br>Normally, one start with the level 1 DFD transform it into module representation using either the transform or the transaction Analysis and then proceed towards the lower level DFDs. At each level of transformation it is important to first determine whether the transform or transaction analysis is applicable to a particular DFD.</p>
+        <h3>Structure Chart</h3>
+        <p>A structure chart represents the software architecture, that is the various modules making up the system, the dependency and the parameters that are passed among the different modules. hence, the structure chart representation can be easily implemented using some programming language.</p>
+        <p>The basic building blocks which are used to design structure charts are the following- </p>
+        <ol type="1">
+            <li><strong>Rectangle Box: </strong>Represents a module</li>
+            <li><strong>Modules: </strong>Module invocation arrows- control is part on one module in the direction of the connecting arrow.</li>
+            <li><strong>Data Flow Arrow: </strong>Arrows are denoted with data name(named data passes from one module to another in the direction of the arrow).</li>
+            <li><strong>Library Modules: </strong>Represented by a rectangle with double edges.</li>
+            <li><strong>Selection: </strong>Represented by a diamond symbol.</li>
+            <li><strong>Repetition: </strong>Represented by a loop around the control flow arrow.</li>
+        </ol>
+
+        <h4>Structure Chart V/S Flow Chart</h4>
+        <p>We are all familiar with the flow chart representation of a program. Flow chart is a convenient technique to represent the flow of control in a program. A structure chart differs from a flow chart in three principle ways.</p>
+        <ol type="i">
+            <li>It is usually difficult to identify the different module of the software from its flowchart representation.</li>
+            <li>Data interchange among different modules is not represented in a flow chart.</li>
+            <li>Sequentially ordering task inherent in a flow chart is suppressed in a structure chart.</li>
+        </ol>
+
+        <h4>Transform Analysis</h4>
+        <p>Transform Analysis identifies the primary function components modules and the high level inputs and outputs.<br>The DFD in few types of parts-</p>
+        <ol type="1">
+            <li>Logical Processing</li>
+            <li>Output Processing</li>
+        </ol>
+        <p>The input portion of DFD includes processes that transform input data from physical (character from terminal ) to logical forms (internal table, list ). Each input portion is called an <strong>Afferent Branch</strong><br>The output portion of a DFD transform output data from logical to physical form. Each output portion is called <strong>efferent branch.</strong> The remaining portion of a DFD is called <strong>the central transform.</strong></p>
+
+        <h4 id="object-modeling-uml">Object-Modeling Using UML</h4>
+        <p><strong>(i) Model: </strong>A model captures aspects important for some application while of abstracting the rest. A model in the context of software development can be graphical, mathematical, textual or program code based. Models are very useful in documenting the design and analysis results. Graphical Models are very popular because they are easy to understand and construct. UML is primary tool of graphical modeling tool.</p>
+        <h4>Need For a Model</h4>
+        <p>An important reason behind constructing a model is that it helps manages complexity. Once models of a system have been constructed, these can be used for a variety of purpose during Software development including <strong>analysis, specification, code generation, design, visualize and understand the problem and the working of a system and testing.</strong></p>
+        <p>In all these application, the UML models can not only used to document the result but also to arive the result themselves.</p>
+
+        <h4>UML (Unified Modeling Language)</h4>
+        <p>As the name implies, is a modeling language. It may be used to visualize, specifies, construct, document artifacts of a software system. It provides a set of notations (examples, rectangles, lines, circles) to create a visual model of the system. Like any other language, UML has its own syntax, and symbols and sentence formation rules and semantics ( meanings of symbols and sentences ). UML is not the system design or development methodology but can be used to document. Object Oriented and Analysis results obtained using same methodology</p>
+    </div>
+    <div id="banner">
+        <p><strong>Where to now?</strong></p>
+        <ul>
+            <li><a style="color:#8E2DE2;"href="index.html"> Home</a></li>
+            <li><a href="cg.html">Computer Graphics</a></li>
+            <li><a href="dbms.html">Database Management System</a></li>
+            <li><a href="ot.html">Optimization Techniques</a></li>
+            <li><a href="maths.html">Mathematics III</a></li>
+            <li><a style="color: #ff3853;"href="contact.html">Contact/Feedback</a></li>
+            <li><a href="#">Go To Top</a></li>
+    </ul>
+    </div>
+    <div id="banner" style="opacity: 0;"></div>
+    <script src="script.js"></script>
+</body>
+</html>

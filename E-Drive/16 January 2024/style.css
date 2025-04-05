@@ -1,0 +1,91 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    background: #0F2027;  
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027); 
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+
+}
+.topnav {
+    overflow: hidden;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 2; 
+}
+.topnav #myLinks {
+    display: none;
+    text-align: center;
+}
+.topnav a {
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+.topnav a.icon {
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    left: 0; 
+    top: 0;
+}
+.topnav a:hover {
+    color: black;
+}
+.active {
+    color: white;
+    float: right;
+}
+#banner {
+    position: relative; 
+    top: 120px; 
+    max-width: 40%;
+    margin: auto;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    #banner {
+        max-width: 80%;
+        top: 50%;
+        transform: translateY(50%);
+    }
+}
+
+a{
+    text-decoration: none;
+}
+h1 {
+    font-weight: bold;
+    font-family: 'Studio Sans', sans-serif;;
+}
+h2{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+h3{
+    font-family: 'Noto Sans KR';
+}
+h4{
+    font-family: 'Noto Sans KR';
+}
+h5 {
+    font-weight: bold;
+    font-family: 'Noto Sans KR';
+}
+h6 {
+    font-weight: bold;
+    font-family: 'Noto Sans KR';
+}
+p{
+    font-family: 'Jaldi';
+}
+hr {
+    border: none; 
+    height: 1px;  
+    background-color: transparent;  
+}

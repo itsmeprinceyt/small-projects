@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering | E Drive - Mohd Uvaish</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="pages.css" type="text/css">
+    <link rel="icon" href="logo_png.png" type="image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/studio-sans" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Jaldi" rel="stylesheet">
+    <style>
+        body{
+            background: #8E2DE2; 
+            background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
+            background: linear-gradient(to right, #4A00E0, #8E2DE2);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html" class="active"><i class="fa fa-home"></i></a>
+        <div id="myLinks">
+            <hr>
+            <a href="index.html">Home</a>
+            <a href="cg.html">Computer Graphics</a>
+            <a href="dbms.html">Database Management System</a>
+            <a href="ot.html">Optimization Techniques</a>
+            <a href="maths.html">Maths III</a>
+            <a href="contact.html">Contact/Feedback</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div id="banner">
+        <h4>Index</h4>
+        <ul>
+            <li><a href="#unit1">UNIT - I</a></li>
+                <ul>
+                    <li><a href="#char">Characteristics of Good Software</li>
+                        <li><a href="#cycle">Software Development Life Cycle</a></li>
+                        <li><a href="#types_models">Types of different Lifecycle Models</a>
+                        <ul type="disc">
+                            <li><a href="#cwm">Classical waterfall Model</a></li>
+                            <li><a href="#iwm">Iterative waterfall Model</a></li>
+                            <li><a href="#pm">Prototyping Model</a></li>
+                            <li><a href="#sm">Spiral Model</a></li>
+
+                        </ul></li>
+                </ul>
+        </ul>
+    </div>
+    <div id="banner">
+        <h1 id="unit1">UNIT - I</h1>
+        <h2>Software Engineering</h2>
+        <p>The term software engineering is composed of two word, software and engineering. Software is more than just a program code. A program is an executable code, which servers some computational purpose.<br></p><p style="text-indent: 20px;">Software is consider to be executable programming code, associated libraries and documentations. Engineering on the other hand, is all about developing products using well defined scientific principle and methods.</p></p><p style="text-indent: 20px;">So we cab define software engineering as an engineering branch associated with the development of software product using the well define scientific principle  method and procedure.</p><p style="text-indent: 20px;">The outcome of software engineering is an efficient on reliable software products. <strong>IEEE</strong>&#40 Institute of Electrical and Electronics Engineers &#41 define software engineering as the application of systematic, discipline, quantifiable approach to the development, operation and maintenance of software. </p>
+
+        <h6>Need of Software Engineering</h6>
+        <p>The need of Software Engineering arise because of higher rate of change in user requirements and environment on which the software is working.</p>
+
+        <h6>Large Software</h6>
+        <p>It is easier to build a wall than to a house, likewise as the size of software become large, Engineering has to step up to give it a scientific procedure.</p>
+
+        <h6>Sociability</h6>
+        <p>If the software process were not based on scientific and engineering concept, it would be easier to recreate new software than to scale an existing one.</p>
+
+        <h6>Cost</h6>
+        <p>As hardware industry has shown its skills and view, manufacturing has lower down the price of computer and electronic hardware, but the cost of software remains high as proper process is not adopted.</p>
+
+        <h6>Dynamic Nature</h6>
+        <p>The always growing and adapting nature of software usually depends upon the environment in which the user work. If the nature of software is always changing, new enhancement need to be done. This is where software engineering place a good role.</p>
+        
+        <h6>Quality Management</h6>
+        <p>Better process of software development provides better and quality software product.</p>
+
+        <h3 id="char">Characteristics of Good Software</h3>
+        <p>A software product can be judged by what it offers and how well it can be used. This software must satisfy on the following grounds:
+            <ul>
+                <li>Operational</li>
+                <li>Transitional</li>
+                <li>Maintenance</li>
+            </ul>
+        </p>
+        <h4>Well Engineering</h4>
+        <h6>&#40i&#41 Operational</h6>
+        <p>This tell how well software works in operation. It can be measured on: 
+            <ul>
+                <li>Usability</li>
+                <li>Efficiency</li>
+                <li>Correctness</li>
+                <li>Functionality</li>
+                <li>Dependability</li>
+                <li>Security</li>
+                <li>Safety</li>
+            </ul>
+        </p>
+        <h6>&#40ii&#41 Transitional</h6>
+        <p>This aspect is important when the software is moved from one platform to another:
+            <ul>
+                <li>Inter operability</li>
+                <li>Reusability</li>
+                <li>Adaptability</li>
+            </ul>
+        </p>
+        <h6>&#40iii&#41 Maintenance</h6>
+        <p>This aspect briefs about how well a software has the capabilities to maintain itself in the ever changing environment: 
+            <ul>
+                <li>Modularity</li>
+                <li>Maintainability</li>
+                <li>Flexibility</li>
+                <li>Scalability</li>
+            </ul>
+        </p>
+        <hr>
+        <p>In short we can say software engineering is a way which tells us to make a software by using well define engineering concept required to efficient, durable, scalable, in budget and on time software product.</p>
+
+        <h3 id="cycle">Software Development Life Cycle</h3>
+        <h4>Lifecycle Model</h4>
+        <p>A Software Life Cycle model &#40 called as process model &#41 is a descriptive and diagrammatic representation of the software life cycle. A lifecycle model represents all the activities required to make a software product. In other words, a lifecycle model maps the different activities perform on a software software product from its inception to retirement. During any life cycle phase, more than one activity make also be carried out.</p>
+
+        <h4>Need for Software Life Cycle Model</h4>
+        <p>The development team must identify a suitable and then adhere to it. Without using of a particular life cycle model the development of a software product would not be in a systematic and disciplined manner. When a software product is being developed by a team there must be a clear understanding among team members about when and what to do. Otherwise it would lead to chaos and project failure.</p>
+
+        <h4 id="types_models">Types of different Lifecycle Models</h4>
+        <p>Many life cycle model have been proposed so far, each of them has some advantages as well as some disadvantages. A few important and commonly used lifecycle models are as follows:
+            <ol type="I">
+                <li>Classical waterfall Model</li>
+                <li>Iterative waterfall Model</li>
+                <li>Prototyping Model</li>
+                <li>Evolutionary Model</li>
+                <li>Spiral Model</li>
+            </ol>
+        </p>
+
+        <h5 id="cwm">Classical Waterfall Model</h5>
+        <img src="se/Models/Classif_waterfall_model.png" loading="lazy" style="max-width: 100%; height: auto;" alt="Classic_waterfall_model">
+        <h6>Feasibility Study</h6>
+        <p>The main aim of feasibility study is to determine wether it would be financially and technically feasible to develop the product.
+            <ol "type="i">
+                <li>At first, project manager or team leader try to have a rough understanding of what is required to be done by visiting the client side.</li>
+                <li>After they have an overall understanding of the problem they investigate the different solution that are possible. Then they examine each of the solutions in terms of what kind of resources required, what would be the cost of development and development time for each solution.</li>
+                <li>Based on this analysis they pick the best solution is feasible financially and technically.</li>
+            </ol>
+        </p>
+
+        <h6>Requirements Analysis and Specifications</h6>
+        <p>The aim of the requirements analysis and specifications phase is to understand the exact requirements of the customer and to document them properly.<br>This phase consist of two of the following activities: <br>
+        <strong>&#40i&#41 requirements gathering & analysis</strong><br><strong>&#40ii&#41 requirements specifications</strong>
+        <ul type="none">
+            <li><strong>&#40i&#41 Requirements gathering & analysis: </strong>The goal of the requirements gathering activity is to collect all relevant information from the customer regarding the product to be develop. This is done to clearly understand the customer requirement so that incompleteness are removed.<br>The requirement analysis activity is began by collecting all relevant data regarding the product to be developed from the users of the product and from the customer through interviews and discussion after that the next phase of the requirements is started. </li>
+            <li><strong>&#40ii&#41 Requirements specifications: </strong>During this activity, the user requirement are systematically organized into a Software Requirement Specification <strong>&#40 SRS &#41</strong> document. The customer requirements gathering and analysis activity are organized into a SRS document. The important component of this documents are functional requirement, non functional requirement and the goals of implementation.</li>
+        </ul>
+        </p>
+
+        <h6>Design</h6>
+        <p>The goal of the design phase is to transform the requirement of specified in the SRS document into a structure that is suitable for implementation in some programming language in a technical terms during the design phase the software architecture is derived from the SRS document. There are two different approaches are available:<br>
+        <strong>&#40i&#41 Traditional design approach</strong><br><strong>&#40ii&#41 Object oriented design approach</strong>
+        <ul type="none">
+            <li><strong>&#40i&#41 Traditional design approach: </strong>A structured analysis of the requirement specification is carried out where the detailed structure of the problem is examine. This is followed by the structured design activities. The result of structured analysis are transform into the software design.</li>
+            
+            <li><strong>&#40ii&#41 Object oriented design approach: </strong>In this technique, various object that occur in the problem domain end. The servicer domain are first identified and the different relationships that exist among these objects are identified.</li>
+        </ul>
+        </p>
+
+        <h6>Coding and unit testing</h6>
+        <p>The purpose of the coding phase &#40 sometimes called the Implementation phase &#41 of software development is to translate the software design into source code.<br>Each component of the design is implemented as a program module. The end product of this phase is a set of program modules that help in individually tested. It involves testing each module in a solution as this is the most efficient  way to debug the error identified at this stage.</p>
+
+        <h6>Integration and System testing</h6>
+        <p>Integration of different modules is undertaken once they have been coded and unit tested. During the integration and system testing phase, the modules are integrated in a plant manner. Integration is normally carried out incrementally over a number of steps. During each integration step, the partially integrated system is tested and a set of previously plant modules are added. Then finally, when all the modules have been successfully integrated and tested, system testing is carried out. The goal of system testing is to insure that the developed system of the develop software confirms to its requirement led out in the SRS document. <br>System testing usually consist of the three different kinds of testing activities:
+        <ul type="none">
+            <li><strong>&#40i&#41 Alpha Testing: </strong>It is the system testing perform by the development team.</li>
+            <li><strong>&#40ii&#41 Beta Testing: </strong>It is the system testing perform by a friendly set of customers.</li>
+            <li><strong>&#40iii&#41 Acceptance Testing: </strong>It is the system testing perform by the customer himself. After the product is delivered, it is determined whether to accept or again make changes to the delivered product. System testing is normally carried out in a plant manner according to the system test plant document.</li>
+        </ul>
+        </p>
+        <h6>Maintenance</h6>
+        <p>Maintenance is a typical software product act that requires much more than the effort necessary to develop the product itself. Maintenance effort is roughly in the 40 : 60 ratio.<br>Maintenance involves performing anyone or more of the following 3 kinds of activities:
+            <ul type="none">
+                <li><strong>&#40i&#41 Correcting errors </strong> that were not discover during the product development phase.</li>
+                <li><strong>&#40ii&#41</strong> Improving the implementation of the system and enhancing the functionalities of the system according to the customer's requirement. This is called <strong>perfective maintenance</strong>.</li>
+                <li><strong>&#40iii&#41</strong> Porting the software to work in a new environment. This is called <strong>Adaptive maintenance</strong></li>
+            </ul>
+        </p>
+
+        <h5 id="iwm">Iterative Waterfall Model</h5>
+        <p>To overcome the major short coming of the classical waterfall model, we came up with the iterative waterfall model.</p>
+        <img src="se/Models/Iterative_Waterfall_model.png" loading="lazy" style="max-width: 100%; height: auto;" alt="iterative_waterfall_model">
+        <p>Here, we provide feedback paths for error collection has detected later in any phase. The advantage of this model is that there is a working model of the system at a very early stage of development which makes it easier to find functional or design flaws.<br><br>The disadvantage with this SDLC <strong>&#40 Software Development Life Cycle &#41</strong> model is that it is applicable only to large and bulky software development project.</p>
+
+        <h5 id="pm">Prototyping Model</h5>
+        <p>A prototype is a toy implementation of the system. A prototype usually exhibits limited functional capabilities, low reliability and insufficient performance compared to the actual software. A prototype is usually built using several shortcuts. The shortcuts might involve using inefficient, inaccurate or dummy functions. A prototype usually turns out to be a very crude version of the actual system.</p>
+
+        <h6>Need for a prototype in software development</h6>
+        <p>There are several uses of a prototype. An important purpose is to illustrate the input data formats, messages, reports and the interactive dialogue to the customer. This is a valuable mechanism for gaining better understanding of the customer need.
+            <ol type="i">
+                <li>How the screen might look like?</li>
+                <li>How the user interface would behave?</li>
+                <li>How the system would produce output?</li>
+            </ol>
+        <p>Another reason for developing a prototype is that it is impossible to get the perfect product in the first attempt. The experience gain in developing the prototype can be used to develop the final product.</p>
+        </p>
+        <img src="se/Models/prototype_model.jpeg" loading="lazy" style="max-width: 100%; height: auto;" alt="prototyping_model">
+        
+        <h5 id="im">Incremental Model</h5>
+        <p>It is also called a <strong>successive version model</strong>. At first, a simple working model is built. It under goes functional improvement and we keep on adding new function till the desired system is built.</p>
+        <ul>
+            <li><strong>Application</strong>
+                <ul type="circle">
+                    <li>Large project where you can easily find modules for incremental implementation.</li>
+                    <li>Also used in object-oriented software development because the system can be easily portion into units in terms of objects.</li>
+                </ul>
+            </li>
+            <li><strong>Advantages</strong>
+                <ul type="circle">
+                    <li>User gets a chance to experiment partially developed system.</li>
+                    <li>Reduce the error because the four modules get tested.</li>
+                </ul>
+            </li>
+            <li><strong>Disadvantages</strong>
+                <ul type="circle">
+                    <li>It is difficult to divide the problem into several versions that would be acceptable to the customer which can be incrementally implemented and delivered.</li>
+                </ul>
+            </li>
+        </ul>
+        <img src="se/Models/Incremental_Model.jpg" loading="lazy" style="max-width: 100%; height: auto;" alt="Incremental_model">
+        
+        <h5 id="sm">Spiral Model</h5>
+        <img src="se/Models/Spiral_model.jpg" loading="lazy" style="max-width: 100%; height: auto;" alt="Spiral Model">
+        <p>The Diagrammatic representation of this model appears like a spiral with many loops. The exact number loops in the spiral is not fixed. Each loop of the spiral represents a phase of the software process.<strong>For example, the innermost loop might be concerned with feasibility study, the next loop with requirement specifications, the next one with design and so on.</strong> Each phase in this model is split into four section.</p>
+        <ol type="1">
+            <li><strong>First Section &#40 Objective Identification &#41</strong>
+                <ol type="a">
+                    <li>During the first sector, it is needed to identify the objective of phase.</li>
+                    <li>Examine the risk associated with these objective.</li>
+                </ol>
+            </li>
+            <li><strong>Second Sector &#40 Risk Assessment & Reduction &#41</strong>
+                <ol type="a">
+                    <li>A detailed analysis is carried out for each identified project risk.</li>
+                    <li>Steps are taken to reduce the risk.<strong>For example, if there is a risk that the requirements are inappropriate, the prototype system may be developed.</strong></li>
+                </ol>
+            </li>
+            <li><strong>Third Sector &#40 Development & Validation &#41</strong>
+                <ol type="a">
+                    <li>Develop and Validate the next level of the product after resolving the identified risk.</li>
+                </ol>
+            </li>
+            <li><strong>Fourth Sector &#40 Review and Planning &#41</strong>
+                <ol type="a">
+                    <li>Review the result achieve so far with the customer and plan the next iteration around the spiral.</li>
+                    <li>More complete version of the software gets built with each iteration around the spiral.</li>
+                </ol>
+            
+            </li>
+        </ol>
+
+        <h6>Circumstances to use Spiral Model</h6>
+        <p>The spiral model is called a <strong>Meta Model</strong> since it encapsulates all other life cycle models. Risk handling is inherently build into this model. The spiral model is suitable for development technically challenging software product. However this model is much more complex than the other model.</p>
+
+        <h6>Comparison of different Life Cycle Model</h6>
+        <p>The classical waterfall model can be considered of basic and all other life cycle model as embellishment of this model. However the classical waterfall model cannot be used in practical development projects. This program is overcome in the iterative waterfall model. The iterative waterfall model is most widely used software development model so far. For this model, it's simple to understand and use. This is not suitable for very large projects and for projects that are subject too many risk.</p><p style="text-indent: 20px;">The prototyping model is suitable for projects for which either the user requirements or the underline technical aspect are not well understood. This model is specially popular for development user interface part of the projects.</p><p style="text-indent: 20px;">The incremental approach suitable for large problems which can be composed into a set of modules for incremental development and delivery. This model is also widely used for object oriented development projects. The spiral model suitable for development for technically challenging software product that have several kinds of risk. This is more complex than the other models that's why this is not used in ordinary project.</p>
+
+        <h6>Requirements Analysis and Specification</h6>
+        <p>Before we start to develop any software it becomes quiet essential for us to understand and document the exact requirement of the customer. Experienced members of the development team carry out t his job. They are called <strong>system analyst.</strong></p>
+        <p style="text-indent: 20px;">The analyst starts requirement gathering analysis activity by collecting all information from the customer and then analyze the collecting information to obtain a clear thorough understanding of the product to be developed. With a view to remove to remove on ambiguities  and inconsistency from the initial customer perception of the problem.<br><br><strong>The following basic questions should be clearly understood by the analyst: </strong>
+        <ol style="font-weight: bold;"type="1">
+            <li>What is the problem?</li>
+            <li>Why is it important to solve the problem?</li>
+            <li>What are the possible solution to the problem?</li>
+            <li>What exactly are the data input to the system and what exactly are the data output by the system?</li>
+            <li>What are the likely complexities that might arise while solving the problem?</li>
+            <li>If there are external software or hardware with which the developed software has to interface, then what exactly would be data inter chain formats with the external system be?</li>
+        </ol>
+        </p>
+    </div>
+    <div id="banner">
+        <p><strong>Where to now?</strong></p>
+        <ul>
+            <li><a style="color:#8E2DE2;"href="index.html"> Home</a></li>
+            <li><a href="cg.html">Computer Graphics</a></li>
+            <li><a href="dbms.html">Database Management System</a></li>
+            <li><a href="ot.html">Optimization Techniques</a></li>
+            <li><a href="maths.html">Mathematics III</a></li>
+            <li><a style="color: #ff3853;"href="contact.html">Contact/Feedback</a></li>
+            <li><a href="#">Go To Top</a></li>
+    </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

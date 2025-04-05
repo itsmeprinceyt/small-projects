@@ -1,0 +1,85 @@
+body{
+    background-color: rgb(19, 19, 19);
+}
+.container{
+    background-color: white;
+    border-radius: 10px;
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+}
+.title{
+    font-family: Arial;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+.js-button img{
+    height: 50px;
+}
+
+.js-moves, .js-result, .js-score {
+    font-family: Arial;
+    font-weight: bold;
+}
+.js-result{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom:0;
+}
+.js-moves img{
+    height: 25px;
+}
+.js-score{
+    font-size: 12px;
+}
+.js-button{
+    background: transparent;
+    height: 120px;
+    width: 120px;
+    border-style:dashed;
+    border-radius: 60px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.js-button:active{
+    background-color: rgb(19, 19, 19);
+}
+.reset-button, .github{
+    font-family: Arial;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.reset-button:hover, .github:hover{
+    opacity: 0.9;
+}
+.github{
+    display: inline-block;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+}
+
+@media (max-width: 786px){
+    .container{
+        padding: 40px 20px 40px 20px;
+        width: 400px;
+    }
+}
