@@ -1,1 +1,1 @@
-## This is my small-project dump/
+## This is my small-project dump.
